@@ -12,7 +12,9 @@
 ## Before Class: Create a Digital Ocean account
 
 Digital Ocean only offers paid accounts, but they charge fractions of a cent per hour your server is running.
-* You can probably find a promo code online [through Google](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=digitalocean+promo+code).
+
+* Use my [promo code](http://jshawl.com/do)!
+  - We'll both get 10 bucks in credits.
 * If you choose not to go with Digital Ocean for your project, feel free to delete your droplet/account after this class.
 
 ## Why are we doing this?
@@ -49,7 +51,7 @@ Once you have set up a Digital Ocean account, click the "Create Droplet" button 
 1. **Name your droplet.** This can be anything.
 2. **Select Size.** The $5 option works fine in this case.
 3. **Select region.** We'll go with the default option of New York 3.
-4. **Select Image.** Choose Ubuntu 14.04 x64.
+4. **Select Image.** Choose Ubuntu 16.04 x64.
 5. **Add SSH Key.** Generate one by running this in your Terminal: `$ cat ~/.ssh/id_rsa.pub | pbcopy`
   * **Note:** This is a Mac-only command.
   * This automatically copies your SSH key to your clipboard.
