@@ -127,9 +127,9 @@ Typically you would create a user account to handle deploys and permissions. **W
 In the interest of time, however, we'll continue using the root user.  
 
 ```
-$ mkdir /var/www
 $ cd /var/www
 $ git clone https://github.com/ga-dc/tunr_mongo_oojs.git
+$ cd tunr_mongo_oojs
 $ git checkout deploy
 ```
 > `/var/www` is going to be the base directory for all applications in this server.  
@@ -137,6 +137,7 @@ $ git checkout deploy
 > It's important that we run this application from the deploy branch!  
 
 ```
+$ npm install
 $ node db/seeds.js
 $ node app.js
 ```
@@ -179,7 +180,7 @@ Enter the following in our new file, or "virtual host"...
 server{
   server_name tunr.com;
   listen 80;
-  root /var/www/tunr_node_oojs/public;
+  root /var/www/tunr_mongo_oojs/public;
   location / {
     // First checks to see if the requested file exists in the assigned root directory.
     // If not, then asks the app if it's storing it elsewhere.
@@ -199,7 +200,7 @@ Now, restart nginx. What do you see?
 
 ```
 $ sudo service nginx restart
-$ node /var/www/tunr_node_oojs
+$ node /var/www/tunr_mongo_oojs
 ```
 
 ![Bad gateway](img/bad-gateway.png)
